@@ -3,7 +3,7 @@ services:
     name: raithu-sethu
     runtime: docker
     rootDir: backend
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: ./backend/Dockerfile
     healthCheckPath: /health
     envVars:
       - key: SUPABASE_URL
