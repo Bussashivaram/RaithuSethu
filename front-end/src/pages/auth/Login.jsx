@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { Mail, Lock, Eye, EyeOff, Sprout, ShoppingBag, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Eye, EyeOff, Sprout, ShoppingBag, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { useToast } from "../../context/ToastContext";
 import { useLanguage } from "../../context/LanguageContext";
@@ -157,13 +157,12 @@ export default function Login() {
             <div>
               <label className="block text-sm font-semibold text-slate-700 mb-1.5">{t('auth.email')}</label>
               <div className="relative">
-                <Mail size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
                   <input
                     type="email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     placeholder={t('auth.email')}
-                    className="input-field pl-9"
+                    className="input-field"
                     autoComplete="email"
                     required
                   />
@@ -178,13 +177,12 @@ export default function Login() {
                 </Link>
               </div>
               <div className="relative">
-                <Lock size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
                 <input
                   type={showPw ? "text" : "password"}
                   value={password}
                   onChange={e => setPassword(e.target.value)}
                   placeholder={t('auth.password')}
-                  className="input-field pl-9 pr-10"
+                  className="input-field pr-10"
                   autoComplete="current-password"
                   required
                 />
